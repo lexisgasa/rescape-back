@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node .",
+    "start": "node --env-file=.env .",
+    "start:dev": "node --env-file=.env --watch .",
     "prepare": "husky"
   },
   "author": "",
@@ -15,16 +16,21 @@
   "devDependencies": {
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.10",
+    "@types/express": "^4.17.21",
+    "@typescript-eslint/eslint-plugin": "7.18",
+    "@typescript-eslint/parser": "7.18",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-xo": "^0.45.0",
     "eslint-config-xo-typescript": "^5.0.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "@typescript-eslint/eslint-plugin": "7.18",
-    "@typescript-eslint/parser": "7.18",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.4.0"
+    "typescript-eslint": "^8.4.0",
+    "chalk": "^5.3.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
