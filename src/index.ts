@@ -1,5 +1,5 @@
 import startServer from "./server/startServer.js";
 
-const port = 3000;
+const port = process.env.PORT;
 
 startServer(Number(port));

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc -w",
-    "start": "node .",
+    "start": "node --env-file=.env .",
+    "start:dev": "node --env-file=.env --watch .",
     "prepare": "husky"
   },
   "author": "",
