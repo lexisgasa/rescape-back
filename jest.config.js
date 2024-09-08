@@ -9,6 +9,7 @@ export default {
     "src/**/*.ts",
     "!src/index.ts",
     "!src/server/startServer.ts",
+    "!src/server/app.ts",
   ],
   resolver: "ts-jest-resolver",
 };
