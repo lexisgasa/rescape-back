@@ -1,10 +1,10 @@
 import express from "express";
 import { generalError } from "./error/generalError/generalError.js";
-import notFoundEndpoint from "./error/notFoundEndpoint/notFoundEndpoint.js";
+import notFoundError from "./error/notFoundError/notFoundError.js";
 
 const app = express();
 
-app.use(notFoundEndpoint);
+app.use(notFoundError);
 
 app.use(generalError);
 

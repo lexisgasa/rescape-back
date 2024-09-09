@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
 import { ServerError } from "../serverError.js";
 
-const notFoundEndpoint = (
+const notFoundError = (
   _req: Request,
   _res: Response,
   next: NextFunction,
@@ -11,4 +11,4 @@ const notFoundEndpoint = (
   next(error);
 };
 
-export default notFoundEndpoint;
+export default notFoundError;
