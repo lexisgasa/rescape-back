@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import healthCheck from "./healthCheck";
+import healthCheck from "../healthCheck";
 
 describe("Given the middleware healthCheck", () => {
   describe("When it receives a request", () => {
