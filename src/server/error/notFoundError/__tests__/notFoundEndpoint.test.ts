@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../../app";
+import app from "../../../app.js";
 
 describe("Given the endpoint with the method 'GET'and the path '/escapesito'", () => {
   describe("When it receives a request", () => {
