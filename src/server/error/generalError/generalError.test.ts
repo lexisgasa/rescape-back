@@ -13,6 +13,7 @@ describe("Given the middleware generalError", () => {
     json: jest.fn().mockReturnThis(),
   };
   const next: NextFunction = jest.fn();
+
   describe("When it receives an error with 404 status code and message 'Not Found'", () => {
     const error = new ServerError("Path not found", 404);
 
@@ -34,7 +35,7 @@ describe("Given the middleware generalError", () => {
 
     describe("When it receives an error with 500 status code", () => {
       test("Then it should return response's status method with a status code of 500", () => {
-        const error = new ServerError("Path not found", 500);
+        const error = new Error("Path not found");
         const expectedStatusCode = 500;
 
         generalError(error, req as Request, res as Response, next);
