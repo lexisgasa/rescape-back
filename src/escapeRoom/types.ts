@@ -1,5 +1,4 @@
 export interface EscapeRoomStructure {
-  id: string;
   name: string;
   alternativeText: string;
   smallImageUrl: string;

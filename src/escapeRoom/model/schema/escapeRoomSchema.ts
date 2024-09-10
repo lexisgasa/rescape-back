@@ -2,10 +2,6 @@ import { Schema } from "mongoose";
 import type { EscapeRoomStructure } from "../../types";
 
 const escapeRoomSchema = new Schema<EscapeRoomStructure>({
-  id: {
-    type: String,
-    required: true,
-  },
   name: {
     type: String,
     unique: true,
