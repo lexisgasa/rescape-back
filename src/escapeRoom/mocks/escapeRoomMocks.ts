@@ -1,6 +1,6 @@
 import { type EscapeRoomStructure } from "../types";
 
-export const escapeRooms: EscapeRoomStructure[] = [
+export const escapeRoomsMocks: EscapeRoomStructure[] = [
   {
     name: "Profana",
     alternativeText: " ",
