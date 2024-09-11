@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "9e8c9553-9375-4ef6-8b04-049b00c3c1e0",
+		"name": "RE:Scape",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26697660"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "Localhost `healthCheck,` endpoint - method `GET` path `/`"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/listado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listado"
+					]
+				},
+				"description": "Localhost `getEscapeRooms` method from `EscapeRoomController`, endpoint - method `GET` path `/listado`"
+			},
+			"response": []
+		}
+	]
+}
