@@ -3,17 +3,15 @@ import morgan from "morgan";
 import { generalError } from "./error/generalError/generalError.js";
 import notFoundError from "./error/notFoundError/notFoundError.js";
 import healthCheck from "./healthCheck/healthCheck.js";
-import EscapeRoomController from "../escapeRoom/controller/EscapeRoomController/EscapeRoomController";
-import EscapeRoom from "../escapeRoom/model/EscapeRoom.js";
+import escapeRoomRouter from "../escapeRoom/router/escapeRoomRouter.js";
 
-const escapeRoomController = new EscapeRoomController(EscapeRoom);
 const app = express();
 
 app.disable("x-powered-by");
 app.use(morgan("dev"));
 
 app.get("/", healthCheck);
-app.get("/list", escapeRoomController.getEscapeRooms);
+app.use("/list", escapeRoomRouter);
 
 app.use(notFoundError);
 app.use(generalError);
