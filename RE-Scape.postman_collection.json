@@ -7,42 +7,42 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/",
+			"name": "/",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/",
-					"protocol": "http",
+					"raw": "https://alexis-garcia-202406-back.onrender.com/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"alexis-garcia-202406-back",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						""
 					]
-				},
-				"description": "Localhost `healthCheck,` endpoint - method `GET` path `/`"
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/listado",
+			"name": "list",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/listado",
-					"protocol": "http",
+					"raw": "https://alexis-garcia-202406-back.onrender.com/list",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"alexis-garcia-202406-back",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"listado"
+						"list"
 					]
-				},
-				"description": "Localhost `getEscapeRooms` method from `EscapeRoomController`, endpoint - method `GET` path `/listado`"
+				}
 			},
 			"response": []
 		}
