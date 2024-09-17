@@ -20,10 +20,10 @@ afterAll(async () => {
   await server.stop();
 });
 
-describe("Given the endpoint with the method 'GET' and the path 'list'", () => {
+describe("Given the endpoint with the method 'GET' and the path 'escaperooms'", () => {
   describe("When it receives a request", () => {
     test("Then it should call response's status method with 200 and a collection of escapeRooms", async () => {
-      const path = "/list";
+      const path = "/escaperooms";
       const expectedStatusCode = 200;
       const escapeRoomsProperty = "escapeRooms";
 

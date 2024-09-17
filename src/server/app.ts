@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request } from "express";
 import morgan from "morgan";
 import cors from "cors";
 import { generalError } from "./error/generalError/generalError.js";
@@ -10,16 +10,18 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:5173",
+    "http://localhost:4173",
     "https://alexis-garcia-202406-front.netlify.app",
   ],
 };
 
 app.use(cors(corsOptions));
 app.disable("x-powered-by");
+app.use(express.json());
 app.use(morgan("dev"));
 
 app.get("/", healthCheck);
-app.use("/list", escapeRoomRouter);
+app.use("/escaperooms", escapeRoomRouter);
 
 app.use(notFoundError);
 app.use(generalError);

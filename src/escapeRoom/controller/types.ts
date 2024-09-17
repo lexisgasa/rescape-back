@@ -1,5 +1,6 @@
 import { type Request, type Response } from "express";
 
 export interface EscapeRoomControllerStructure {
-  getEscapeRooms: (_req: Request, res: Response) => Promise<void>;
+  getEscapeRooms: (req: Request, res: Response) => Promise<void>;
+  postEscapeRoom: (req: Request, res: Response) => Promise<void>;
 }
