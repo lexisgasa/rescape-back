@@ -13,9 +13,9 @@ class EscapeRoomController implements EscapeRoomControllerStructure {
   };
 
   postEscapeRoom = async (req: Request, res: Response): Promise<void> => {
-    await this.escapeRoomModel.create(req.body);
+    const escapeRoom = await this.escapeRoomModel.create(req.body);
 
-    res.status(201).json({ message: "Escape room successfully created" });
+    res.status(201).json({ escapeRoom });
   };
 }
 
