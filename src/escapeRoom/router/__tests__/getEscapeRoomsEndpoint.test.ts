@@ -1,11 +1,11 @@
 import request from "supertest";
-import app from "../../../../server/app";
-import { type EscapeRoomStructure } from "../../../types";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import connectToDatabase from "../../../../database";
-import EscapeRoom from "../../../model/EscapeRoom.js";
-import { escapeRoomsMocks } from "../../../mocks/escapeRoomMocks.js";
 import mongoose from "mongoose";
+import connectToDatabase from "../../../database";
+import { escapeRoomsMocks } from "../../mocks/escapeRoomMocks";
+import EscapeRoom from "../../model/EscapeRoom";
+import { type EscapeRoomStructure } from "../../types";
+import app from "../../../server/app";
 
 let server: MongoMemoryServer;
 

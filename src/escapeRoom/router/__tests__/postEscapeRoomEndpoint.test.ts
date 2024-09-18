@@ -1,9 +1,9 @@
 import request from "supertest";
-import app from "../../../../server/app";
-import { type EscapeRoomStructure } from "../../../types";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import connectToDatabase from "../../../../database";
 import mongoose from "mongoose";
+import connectToDatabase from "../../../database";
+import { type EscapeRoomStructure } from "../../types";
+import app from "../../../server/app";
 
 let server: MongoMemoryServer;
 
