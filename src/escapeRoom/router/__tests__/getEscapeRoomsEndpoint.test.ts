@@ -1,11 +1,11 @@
 import request from "supertest";
-import app from "../../../../server/app";
-import { type EscapeRoomStructure } from "../../../types";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import connectToDatabase from "../../../../database";
-import EscapeRoom from "../../../model/EscapeRoom.js";
-import { escapeRoomsMocks } from "../../../mocks/escapeRoomMocks.js";
 import mongoose from "mongoose";
+import connectToDatabase from "../../../database";
+import { escapeRoomsMocks } from "../../mocks/escapeRoomMocks";
+import EscapeRoom from "../../model/EscapeRoom";
+import { type EscapeRoomStructure } from "../../types";
+import app from "../../../server/app";
 
 let server: MongoMemoryServer;
 
@@ -20,10 +20,10 @@ afterAll(async () => {
   await server.stop();
 });
 
-describe("Given the endpoint with the method 'GET' and the path 'list'", () => {
+describe("Given the endpoint with the method 'GET' and the path 'escaperooms'", () => {
   describe("When it receives a request", () => {
     test("Then it should call response's status method with 200 and a collection of escapeRooms", async () => {
-      const path = "/list";
+      const path = "/escaperooms";
       const expectedStatusCode = 200;
       const escapeRoomsProperty = "escapeRooms";
 

@@ -7,5 +7,6 @@ const escapeRoomRouter = express.Router();
 const escapeRoomController = new EscapeRoomController(EscapeRoom);
 
 escapeRoomRouter.get("/", escapeRoomController.getEscapeRooms);
+escapeRoomRouter.post("/", escapeRoomController.postEscapeRoom);
 
 export default escapeRoomRouter;
